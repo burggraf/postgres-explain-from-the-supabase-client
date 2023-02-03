@@ -60,3 +60,16 @@ notify pgrst, 'reload config';
 
 ## Conclusion
 This makes it easier to see exactly what PostgREST (the PostgreSQL REST interface used by the Supabase Javascript library) is doing behind the scenes.  Once you know where the big costs are in your query, you can build the necessary indexes and you should see better performance on those operations.
+
+## Note
+You'll need to be on PostgREST 10.1.1 or higher to get this capability.  
+
+To check your version, you can run this:
+
+```sh
+curl '<SUPABASE_URL>/rest/v1/' \
+-H "apikey: <SUPABASE_ANON_KEY>" \
+-H "Authorization: Bearer <SUPABASE_ANON_KEY>" | more
+```
+
+You'll see the PostgREST version near the very beginning of the output.
