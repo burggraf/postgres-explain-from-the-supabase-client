@@ -44,7 +44,7 @@ const { data, error } = await supabase
     teams (
       name
     )
-  `).explain( {analyze: true, verbose: true, format: 'json'})
+  `).explain({analyze: true, verbose: true, format: 'json'})
 ```
 
 This will return valuable information about the query execution plan that you can use to tune your database for better performance.
